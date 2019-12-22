@@ -20,7 +20,7 @@ class SessionsController extends Controller
         ]);
 
         // 验证此用户是否存在于数据库
-        if(Auth::attempt($credentials,$reqeust->has('remember')))
+        if(Auth::attempt($credentials,$request->has('remember')))
         {
             // 登录成功
             session()->flash('success','欢迎回来！');
